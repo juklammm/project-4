@@ -3,7 +3,9 @@ let vScale = 16;
 let bgColor = (220, 39, 20);
 let textColor = 255;
 let frumpyTriggered = false;
-let beyourselfTriggered = false;
+let beletlfTriggered = false;
+let dowdypersonTriggered=false;
+let uglyTriggered=false;
 let cameraActive = true;
 let font;
 let fontSize = 16; 
@@ -65,6 +67,12 @@ function draw() {
         if (beyourselfTriggered) {
           text("BEYOURSELF", x, y);
         }
+        if (dowdypersonTriggered) {
+          text("DOWDYPERSON", x, y);
+        }
+        if (uglyTriggered) {
+          text("UGLY", x, y);
+        }
       }
     }
   }
@@ -91,6 +99,29 @@ function keyPressed() {
     fill(textColor);
     stopCameraFor(1000);
   }
+    if (key == 'd') {
+    beyourselfTriggered = false;
+    frumpyTriggered = false;
+    dowdypersonTriggered=true;
+    bgColor = color(220, 39, 20);
+    textColor = 255;
+    fontSize = 40; 
+    textStep = 150; 
+    fill(textColor);
+    stopCameraFor(1000);
+  }
+    if (key == 'u') {
+    beyourselfTriggered = false;
+    frumpyTriggered = false;
+    dowdypersonTriggered=false;
+    uglyTriggered=true;
+    bgColor = color(220, 39, 20);
+    textColor = 255;
+    fontSize = 180; 
+    textStep = 80; 
+    fill(textColor);
+    stopCameraFor(1000);
+  }
 }
 
 function stopCameraFor(ms) {
@@ -100,5 +131,7 @@ function stopCameraFor(ms) {
     video.play(); 
     frumpyTriggered = false; 
     beyourselfTriggered = false; 
+    dowdypersonTriggered=false;
+    uglyTriggered=false;
   }, ms);
 }
