@@ -1,24 +1,26 @@
+<!DOCTYPE html>
 <html>
   <head>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
     <script src="sketch.js"></script>
     <style>
-      /* 添加样式来定位文本输入框 */
-      input#textInput {
-        position: fixed; /* 固定位置 */
-        bottom: 10px; /* 距离底部10px */
-        width: 20px; /* 宽度为20px */
-        height: 20px; /* 高度为20px */
-        border-radius: 10px; /* 圆角为10px */
-        background-color: white; /* 白色背景 */
-        border: none; /* 去掉边框 */
+      /* 添加样式以创建固定的文本输入框 */
+      input#customInput {
+        position: fixed;
+        bottom: 10px;
+        left: 20px;
+        right: 20px;
+        width: calc(100% - 40px); /* 确保输入框与页面左右边缘有20px的距离 */
+        height: 20px;
+        border-radius: 10px;
+        border: none;
+        padding: 5px;
       }
     </style>
   </head>
   <body>
     <main>
-      <!-- 在<main>元素下添加文本输入框 -->
-      <input type="text" id="textInput">
+      <input type="text" id="customInput" placeholder="输入文本">
     </main>
   </body>
 </html>
