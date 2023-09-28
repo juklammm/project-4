@@ -4,15 +4,14 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
     <script src="sketch.js"></script>
     <style>
-      /* 添加样式以创建固定的文本输入框 */
       input#customInput {
         position: fixed;
         bottom: 10px;
         left: 20px;
         right: 20px;
-        width: calc(100% - 40px); /* 确保输入框与页面左右边缘有20px的距离 */
-        height: 20px;
-        border-radius: 10px;
+        width: calc(100% - 60px); 
+        height: 40px;
+        border-radius: 40px;
         border: none;
         padding: 5px;
       }
@@ -20,7 +19,7 @@
   </head>
   <body>
     <main>
-      <input type="text" id="customInput" placeholder="输入文本">
+      <input type="text" id="customInput" placeholder="Text Here">
     </main>
   </body>
 </html>
