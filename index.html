@@ -3,23 +3,29 @@
   <head>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
     <script src="sketch.js"></script>
-    <style>
-      input#customInput {
-        position: fixed;
-        bottom: 40px;
-        left: 60px;
-        right: 60px;
-        width: calc(100% - 60px); 
-        height: 40px;
-        border-radius: 40px;
-        border: none;
-        padding: 5px;
-      }
+  <style>
+    /* 添加全局样式以修饰输入框 */
+    body {
+      margin: 0; /* 清除默认外边距 */
+      overflow: hidden; /* 防止网页出现滚动条 */
+    }
+    input[type="text"] {
+      position: fixed; /* 相对于视口固定位置 */
+      bottom: 40px; /* 距离底部 40px */
+      left: 40px; /* 距离左侧 40px */
+      right: 40px; /* 距离右侧 40px */
+      width: calc(100% - 80px); /* 宽度为视口宽度减去左右边距的计算值 */
+      height: 40px; /* 高度为 40px */
+      background-color: white; /* 白色背景 */
+      border: none; /* 没有边框 */
+      border-radius: 40px; /* 40px的圆角 */
+      font-size: 16px; /* 字体大小 */
+    }
     </style>
   </head>
   <body>
     <main>
-      <input type="text" id="customInput" placeholder="   Text Here">
+      <input type="text" id="customInput" placeholder="      Text Here">
     </main>
   </body>
 </html>
