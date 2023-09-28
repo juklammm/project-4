@@ -18,6 +18,7 @@ function setup() {
   pixelDensity(1);
   video = createCapture(VIDEO);
   video.size(width/vScale, height/vScale);
+  video.hide();
   textFont(font);
   textSize(fontSize);
 }
