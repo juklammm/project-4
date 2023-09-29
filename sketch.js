@@ -8,11 +8,11 @@ let dowdypersonTriggered=false;
 let uglyTriggered=false;
 let cameraActive = true;
 let font;
-let fontSize = 16; 
-let textStep = 20; 
+let fontSize = 18; 
+let textStep = 10; 
 
 function preload() {
-  font = loadFont('ALFR_HO.TTF');
+  font = loadFont('fusion-pixel-10px-monospaced.ttf');
 }
 
 function setup() {
