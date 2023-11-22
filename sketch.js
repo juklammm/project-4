@@ -17,7 +17,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  pixelDensity(5);
+  pixelDensity(1);
   video = createCapture(VIDEO);
   video.size(width/vScale, height/vScale);
   video.hide();
