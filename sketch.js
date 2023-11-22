@@ -1,5 +1,5 @@
 let video;
-let vScale = 16;
+let vScale = 8;
 let bgColor = (220, 39, 20);
 let textColor = 255;
 let frumpyTriggered = false;
@@ -17,7 +17,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  pixelDensity(1);
+  pixelDensity(5);
   video = createCapture(VIDEO);
   video.size(width/vScale, height/vScale);
   video.hide();
@@ -47,7 +47,7 @@ function draw() {
         rectMode(CENTER);
         rect(x * vScale, y * vScale, w * 2, w * 2);
 
-        if (random(1) < 0.3) { 
+        if (random(1) < 0.6) { 
           let character = String.fromCharCode(floor(random(33, 126))); 
           fill(220, 39, 20); 
           text(character, x * vScale, y * vScale);
